@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.5//EN"
+    "http://struts.apache.org/dtds/struts-2.5.dtd">
+
+<struts>
+
+    <constant name="struts.devMode" value="true" />
+	<constant name="struts.custom.i18n.resources" value="package"/>
+    <package name="index" extends="struts-default">
+        <action name="show" class="com.projectdev.sellingmachine.action.ShopAction" method="execute">
+            <result name="success">/pages/common/store.jsp</result>
+        </action>
+    </package>
+
+</struts>

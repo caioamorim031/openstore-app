@@ -39,7 +39,7 @@
 					</tr>
 				</s:iterator>
 		</table>
-		<h2><s:property value="order.totalTaxes"/></h2>
+		<h2>Sales Taxes: <s:property value="order.totalTaxes"/></h2>
 
 	</body>
 </html>

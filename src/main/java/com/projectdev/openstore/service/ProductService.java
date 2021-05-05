@@ -12,6 +12,18 @@ import com.projectdev.openstore.vo.ProductVO;
 
 public class ProductService {
 	
+	private static ProductService productService;
+	
+	private ProductService(){
+	}
+	
+	public static synchronized ProductService getInstance(){
+		if(productService == null){
+			productService = new ProductService();
+		}
+		return productService;
+	}
+	
 	public List<ProductVO> getProductData() throws Exception{
 		
 		ProductDAO pDao = new ProductDAOImpl();

@@ -23,7 +23,7 @@ public class ShopAction extends ActionSupport {
 	
 	public String execute(){
 		
-		ProductService ps = new ProductService();
+		ProductService ps = ProductService.getInstance();
 		
 		try {
 			this.setProducts(ps.getProductData());
@@ -41,7 +41,7 @@ public class ShopAction extends ActionSupport {
 		
 		List<ProductOrderVO> persistProducts = new ArrayList<>();
 		
-		ProductService ps = new ProductService();
+		ProductService ps = ProductService.getInstance();
 		
 		for (Iterator iterator = selectedProducts.iterator(); iterator.hasNext();) {
 			ProductOrderVO productVO = (ProductOrderVO) iterator.next();
